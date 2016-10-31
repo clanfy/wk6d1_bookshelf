@@ -44,10 +44,10 @@ public class BookcaseTest{
   }
 
   @Test 
-  public void donateBooksAfterReading(){
+  public void SellBooksAfterFullShelf(){
     bookcase.addBook(book);
     assertEquals(1, bookcase.bookCount());
-    bookcase.donate();
+    bookcase.sell();
     assertEquals(0, bookcase.bookCount());
   }
 
