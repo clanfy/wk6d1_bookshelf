@@ -22,6 +22,18 @@ public class Bookcase{
     return counter;
   }
 
+  public void addBook(Book book){
+    if (shelfFull()) {
+      return;
+    }
+    int nextEmptyIndex = bookCount();
+    shelf[nextEmptyIndex] = book;
+  }
+
+  public boolean shelfFull(){
+    return bookCount() == shelf.length;
+  }
+
 
 
 

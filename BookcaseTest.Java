@@ -21,6 +21,12 @@ public class BookcaseTest{
     assertEquals(0, bookcase.bookCount());
   }
 
+  @Test
+  public void canAddBook(){
+    bookcase.addBook(book);
+    assertEquals(1, bookcase.bookCount());
+  }
+
 
 
 }
