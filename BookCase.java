@@ -10,6 +10,18 @@ public class Bookcase{
     return this.type;
   }
 
+  public int bookCount(){
+
+    int counter = 0;
+
+    for(Book book : shelf) {
+      if (book != null) {
+        counter++;
+      }
+    }
+    return counter;
+  }
+
 
 
 

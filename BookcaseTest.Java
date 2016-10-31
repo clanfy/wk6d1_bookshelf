@@ -16,6 +16,11 @@ public class BookcaseTest{
     assertEquals( "Oak", bookcase.getType() );
   }
 
+  @Test 
+  public void shelfStartsEmpty(){
+    assertEquals(0, bookcase.bookCount());
+  }
+
 
 
 }
