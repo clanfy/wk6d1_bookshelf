@@ -43,6 +43,14 @@ public class BookcaseTest{
     assertEquals(13, bookcase.bookCount());
   }
 
+  @Test 
+  public void donateBooksAfterReading(){
+    bookcase.addBook(book);
+    assertEquals(1, bookcase.bookCount());
+    bookcase.donate();
+    assertEquals(0, bookcase.bookCount());
+  }
+
 
 
 }

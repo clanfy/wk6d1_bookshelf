@@ -34,6 +34,13 @@ public class Bookcase{
     return bookCount() == shelf.length;
   }
 
+  public void donate(){
+    for (int i = 0; i < shelf.length; i++ ) {
+      shelf[i] = null;
+      
+    }
+  }
+
 
 
 
