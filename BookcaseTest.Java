@@ -27,6 +27,14 @@ public class BookcaseTest{
     assertEquals(1, bookcase.bookCount());
   }
 
+  @Test
+  public void cantAddWhenShelfFull(){
+    for (int i = 0; i < 20; i++){
+      bookcase.addBook(book);
+    }
+    assertEquals(13, bookcase.bookCount());
+  }
+
 
 
 }
