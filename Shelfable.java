@@ -1,4 +1,3 @@
 public interface Shelfable{
-  
-  boolean getIsShelfable();
+String shelf();
 }

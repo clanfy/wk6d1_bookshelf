@@ -1,6 +1,7 @@
-public class Book implements Shelfable{
+public class KnickKnack implements Shelfable{
 
   public String shelf(){
     return "shelved";
   }
+
 }

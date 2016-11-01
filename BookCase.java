@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Bookcase{
   private String type;
   private ArrayList<Shelfable> shelf;
@@ -12,37 +14,26 @@ public class Bookcase{
   }
 
   public int bookCount(){
-
-    int counter = 0;
-
-    for(Book book : shelf) {
-      if (book != null) {
-        counter++;
-      }
-    }
-    return counter;
+    return this.shelf.size();
   }
 
-  public void addBook(Book book){
-    if (shelfFull()) {
-      return;
-    }
-    int nextEmptyIndex = bookCount();
-    shelf[nextEmptyIndex] = book;
-  }
-
-  public boolean shelfFull(){
-    return bookCount() == shelf.length;
-  }
+  public void addBook(Shelfable thing){
+    this.shelf.add(thing);
+}
+  // public boolean shelfFull(){
+  //   return bookCount() == shelf.length;
+  // }
 
   public void sell(){
-    for (int i = 0; i < shelf.length; i++ ) {
-      shelf[i] = null;
-      
-    }
+    this.shelf.clear();
   }
 
-
+  public Shelfable empty(){
+    if (bookCount() > 0){
+      return shelf.remove(0);
+    }
+    return null;
+  }
 
 
 }
