@@ -1,6 +1,6 @@
 public class Book implements Shelfable{
 
   public String shelf(){
-    return "shelved";
+    return "book shelved";
   }
 }

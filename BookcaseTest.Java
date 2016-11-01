@@ -73,7 +73,15 @@ public class BookcaseTest{
     bookcase.addBook(book);
     Shelfable thing = bookcase.empty();
     Book first = (Book) thing;
-    assertEquals("shelved", first.shelf());
+    assertEquals("book shelved", first.shelf());
+  }
+
+  @Test
+  public void canGetKnickKnackBack(){
+    bookcase.addBook(knickKnack);
+    Shelfable thing = bookcase.empty();
+    KnickKnack first = (KnickKnack) thing;
+    assertEquals("knickknack shelved", first.shelf());
   }
 
 
