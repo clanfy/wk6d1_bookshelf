@@ -61,5 +61,12 @@ public class BookcaseTest{
     assertEquals(bookcase.bookCount(), 0);
   }
 
+  @Test 
+  public void canEmpty(){
+    bookcase.addBook(book);
+    Shelfable thing = bookcase.empty();
+    assertNotNull(thing);
+  }
+
 
 }
