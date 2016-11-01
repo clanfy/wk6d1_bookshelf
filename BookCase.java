@@ -1,9 +1,10 @@
 public class Bookcase{
   private String type;
-  private Book[] shelf;
+  private ArrayList<Shelfable> shelf;
+
   public Bookcase(String type) {
     this.type = type;
-    this.shelf = new Book[13];
+    this.shelf = new ArrayList<Shelfable>();
   }
 
   public String getType(){
