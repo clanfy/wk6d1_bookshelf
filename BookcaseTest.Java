@@ -68,5 +68,13 @@ public class BookcaseTest{
     assertNotNull(thing);
   }
 
+  @Test
+  public void canGetBookBack(){
+    bookcase.addBook(book);
+    Shelfable thing = bookcase.empty();
+    Book first = (Book) thing;
+    assertEquals("shelved", first.shelf());
+  }
+
 
 }
